@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COFFEE STRAW | Boutique Roastery</title>
+    <link rel="stylesheet" href="/src/index.css" />
+  </head>
+  <body>
+    <div id="app-container" class="min-h-screen">
+      <!-- Background Atmosphere -->
+      <div class="fixed top-0 left-0 w-full h-[50vh] bg-gradient-to-b from-accent-gold/5 to-transparent pointer-events-none -z-10"></div>
+      <div class="fixed top-[20%] left-[-100px] w-80 h-80 bg-accent-gold opacity-5 blur-[120px] rounded-full pointer-events-none -z-10"></div>
+      <div class="fixed bottom-0 right-[-100px] w-96 h-96 bg-accent-gold opacity-10 blur-[150px] rounded-full pointer-events-none -z-10"></div>
+
+      <!-- Persistent Header -->
+      <header id="main-header" class="sticky top-0 z-50 bg-bg-dark/90 backdrop-blur-xl border-b border-white/5 shadow-2xl">
+        <div class="max-w-xl mx-auto px-6 py-6 flex items-center justify-between">
+          <div class="flex items-center gap-4">
+            <div class="relative group">
+               <div class="w-12 h-12 rounded-full border-2 border-accent-gold/30 flex items-center justify-center transition-transform group-hover:scale-110 duration-500">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-gold"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" x2="6" y1="2" y2="4"/><line x1="10" x2="10" y1="2" y2="4"/><line x1="14" x2="14" y1="2" y2="4"/></svg>
+               </div>
+               <div class="absolute inset-0 border border-accent-gold rounded-full animate-ping opacity-20"></div>
+            </div>
+            <div>
+              <h1 id="app-title" class="text-lg font-bold tracking-tight text-accent-gold leading-none font-serif italic">COFFEE STRAW</h1>
+              <p id="app-subtitle" class="text-[9px] uppercase tracking-[0.3em] text-white/40 mt-1.5 font-bold">Boutique Roastery</p>
+            </div>
+          </div>
+          
+          <button id="lang-toggle" class="group flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-[10px] font-bold uppercase tracking-widest hover:bg-accent-gold hover:text-black transition-all duration-300 active:scale-95">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-gold group-hover:text-black"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
+            <span id="lang-text">Arabic</span>
+          </button>
+        </div>
+
+        <div class="max-w-xl mx-auto">
+          <div class="px-6 pb-4">
+            <div class="relative group">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute left-4 top-1/2 -translate-y-1/2 text-accent-gold/60 group-focus-within:text-accent-gold group-focus-within:scale-110 transition-all ltr-only"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+              <input 
+                id="menu-search"
+                type="text"
+                placeholder="FIND YOUR FAVORITE..."
+                class="w-full bg-white/5 border border-white/5 rounded-full py-3.5 pl-12 pr-6 text-[10px] uppercase tracking-[0.2em] focus:bg-white/10 focus:border-accent-gold/40 transition-all outline-none placeholder:opacity-30"
+              />
+            </div>
+          </div>
+
+          <div id="category-nav" class="px-6 pb-4 flex gap-3 overflow-x-auto no-scrollbar scroll-smooth mask-fade-edges">
+            <!-- Categories injected here -->
+          </div>
+        </div>
+      </header>
+
+      <main class="max-w-xl mx-auto px-6 py-12 space-y-24">
+        <section id="trending-section" class="space-y-6">
+          <div class="flex items-center justify-between">
+            <h2 id="trending-label" class="text-[10px] font-bold uppercase tracking-[0.4em] text-accent-gold">Trending Selection</h2>
+            <div class="h-[1px] flex-1 bg-accent-gold/20 mx-4"></div>
+            <div class="flex gap-1">
+              <div class="w-1 h-1 rounded-full bg-accent-gold"></div>
+              <div class="w-1 h-1 rounded-full bg-accent-gold/30"></div>
+              <div class="w-1 h-1 rounded-full bg-accent-gold/30"></div>
+            </div>
+          </div>
+          <div id="trending-items-container" class="flex gap-4 overflow-x-auto no-scrollbar pb-4 mask-fade-right">
+             <!-- Placeholder cards added via static/dynamic logic if needed, but for now we follow the theme -->
+          </div>
+        </section>
+
+        <div id="menu-content" class="space-y-24">
+          <!-- Menu sections injected here -->
+        </div>
+      </main>
+
+      <footer id="main-footer" class="max-w-xl mx-auto px-8 py-20 bg-surface/40 backdrop-blur-md border-t border-white/5 mt-32 text-center space-y-12">
+        <div class="flex flex-col items-center gap-6">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-[1px] bg-accent-gold/20"></div>
+            <div class="flex items-center gap-2">
+               <div class="w-8 h-8 rounded-full border border-accent-gold/40 flex items-center justify-center">
+                 <div class="w-3 h-2 border border-accent-gold/40 rounded-b-sm"></div>
+               </div>
+               <span class="text-[10px] font-bold uppercase tracking-[0.4em] text-accent-gold">COFFEE STRAW</span>
+            </div>
+            <div class="w-12 h-[1px] bg-accent-gold/20"></div>
+          </div>
+          <div class="flex gap-10 text-[9px] font-bold uppercase tracking-[0.3em]">
+            <a href="#" class="opacity-40 hover:opacity-100 hover:text-accent-gold transition-all duration-300">Instagram</a>
+            <a href="#" class="opacity-40 hover:opacity-100 hover:text-accent-gold transition-all duration-300">Facebook</a>
+          </div>
+        </div>
+        <div class="space-y-3">
+          <p id="footer-prices" class="text-[9px] uppercase tracking-[0.2em] opacity-30">ALL PRICES ARE IN EGYPTIAN POUNDS (EGP)</p>
+          <p id="footer-reserved" class="text-[11px] opacity-40 leading-relaxed font-light"></p>
+          <p id="footer-terms" class="text-[11px] opacity-40 font-sans"></p>
+        </div>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
