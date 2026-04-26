@@ -263,7 +263,7 @@ function updateStaticText() {
       langText: 'English',
       trending: 'قائمة الرائج لدينا',
       footerPrices: 'جميع الأسعار بالجنيه المصري (EGP)',
-      footerReserved: `جميع الحقوق محفوظة {new Date().getFullYear()} © كوفي سترو`,
+      footerReserved: `جميع الحقوق محفوظة ${new Date().getFullYear()} © كوفي سترو`,
       footerTerms: 'تطبق الشروط والأحكام و الأسعار شاملة الضريبة'
     }
   };
